@@ -11,7 +11,7 @@ sjtime = str(round(time.time()*1000))
 
 
 #'1685204116681'
-gg = requests.request("GET","http://gh.qninq.cn/https://raw.githubusercontent.com/241793/web/main/gg?token=GHSAT0AAAAAACCX7E6443MOJVYZK4JX4A7WZDUPOAQ")
+gg = requests.request("GET","http://gh.qninq.cn/https://raw.githubusercontent.com/241793/bucai2/main/gg")
 print(gg.text)
 for b in range(len(token1)):
     token = token1[b]
