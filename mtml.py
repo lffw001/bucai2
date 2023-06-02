@@ -1,6 +1,6 @@
 import json
 import os
-
+from urllib.parse import quote,unquote
 import requests,time,datetime
 
 #美团米粒签到和三餐，变量mttoken=xxxx,不要token=,多号&分割
@@ -11,7 +11,7 @@ sjtime = str(round(time.time()*1000))
 
 
 #'1685204116681'
-gg = requests.request("GET","http://gh.qninq.cn/https://raw.githubusercontent.com/241793/bucai2/main/gg")
+gg = requests.request("GET",unquote("http%3A%2F%2Fgh.qninq.cn%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2F241793%2Fbucai2%2Fmain%2Fgg",'utf-8'))
 print(gg.text)
 for b in range(len(token1)):
     token = token1[b]
