@@ -2,6 +2,7 @@ import json
 import os
 import time
 from urllib.parse import quote,unquote
+#自己定时在任务脚本前面
 #乐乐看提现，变量名:lelekck，需要抓包apillk.cengaw.cn/请求头里面的device#Authorization，（Authorization只需要Bearer后面的部分）
 import requests
 money = "5"#提现金额，默认5
