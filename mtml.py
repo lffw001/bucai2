@@ -3,6 +3,7 @@ import os
 from sendNotify import gg
 from urllib.parse import quote,unquote
 import requests,time,datetime
+#需要库里的依赖sendNotify.py自己在频道或者库下载
 
 #美团米粒签到和三餐，变量mttoken=xxxx,不要token=,多号&分割
 
