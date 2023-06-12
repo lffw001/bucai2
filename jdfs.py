@@ -1,9 +1,9 @@
 import requests,json,time,os
 from sendNotify import gg
 '''''
-京东公众号，签到兑红包，抓全部cookie
+京东公众号--》签到兑红包，抓全部cookie
 变量名：jdck,多号用&或者新建变量
-完成签到,兑换50，任务概率完成一般都是火爆
+完成签到,兑换50金豆，任务概率完成一般都是火爆
 定时 cron 0 0 0,10 * * *
 '''''
 cookie0 = os.getenv("jdck")
