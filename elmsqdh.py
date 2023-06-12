@@ -1,4 +1,4 @@
-import sendNotify
+import sendNotify,os
 import requests, time, datetime
 import json
 from urllib.parse import quote, unquote
@@ -6,7 +6,7 @@ from sendNotify import gg
 # @不才
 # 饿了么社区签到换会员，单号版
 # 变量：elmck，多号&或者单独设置elmck（跟京东一样）隔开，定时cron 0 0 10 * * *
-#v1.1,需要我发的的依赖
+#v1.2,需要我发的的依赖,再报错就跟我说，懒得加小验证了
 ck = os.getenv("elmck")
 token = ""#pushplus的token，不需要通知的可以不填
 user = ""#pushplus的用户群组
@@ -26,8 +26,8 @@ def pushplus (OO0OO0OO0OO0O00O0 ,O0OO0O0OO0O0O00OO ):#line:2
     except :#line:16
         print ('推送异常！')#line:17
 gg =requests .request ("GET",unquote ("http%3A%2F%2Fgh.qninq.cn%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2F241793%2Fbucai2%2Fmain%2Fgg",'utf-8'))#line:19
-print (gg())#line:20
-print ("单号版")#line:21
+print(gg())#line:20
+print("单号版")#line:21
 url0 ="https://waimai-guide.ele.me/h5/mtop.alsc.wechat.biz.api.community.homepage/1.0/4.0/?jsv=2.4.12&appKey=32529321&t="+nowtime +"&sign=cc554ef10e6f16f1ba68e5e616dc6f68&c=65132fab890611a36ea4c56426be6bc5_1685709597766%3Bde94d00b67ff8d2082f9efeeaf38cfd4&api=mtop.alsc.wechat.biz.api.community.homepage&dataType=json&method=GET&timeout=10000&v=1.0&type=originaljson&ttid=wxece3a9a4c82f58c9%40wechat_ios_10.20.1&accountSite=eleme&data=%7B%22sceneCode%22%3A%22%22%2C%22inviter%22%3A%2299388458%22%2C%22unionId%22%3A%22o_PVDuFVUiMuXa6jZ4cdWpremOXc%22%2C%22communityType%22%3A1%2C%22groupEnvironment%22%3Atrue%2C%22encryptedData%22%3A%22%22%2C%22iv%22%3A%22%22%2C%22code%22%3A%22%22%7D&_bx-m=1"#line:23
 payload0 ={}#line:25
 headers0 ={'Host':'waimai-guide.ele.me','Connection':'keep-alive','Accept':'application/json','User-Agent':'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36 MicroMessenger/7.0.9.501 NetType/WIFI MiniProgramEnv/Windows WindowsWechat','X-UA':'MiniAppVersion/10.20.1 DeviceId/o_PVDuFVUiMuXa6jZ4cdWpremOXc','bx-ua':'303$bZdE95b8sTs8MDsiexRRS/Ez1qtZFtT1I1zFzFMzYs7DGC/EWG8S/lmy7xVK7xEvatk2itmmLFo0t3usT+xYvKNXtfyVb4eaiLMeTMgSIAR7TYqV3dD2lrmYvU8sgmCq+6PoF9YXQd7Ab10uy1+TAXWbI2cg+2h5/YqJFcX7ZQXxu3PmLgRwpciFcnoWbPEheM+zjGmXeDBTiDdMOW7DWR5ptZfDKXkp0lOW+6GoA9mFBSl6Dg5vMbm2elHVa2NXL3u2633yb7SWRyLkexgK2E6//CyJGZt4qh8Jta/Xfcg8A5YYfnzWlVSi2p8bc/T4QVv5QNRWWyIIx+wcAUHm6Xse9S3e2V5G6xLGOWPKtnUEXk0y5yzsXUNgoi/VL1FSIr96iv34L3mqihV0CrpH7e4NEpb7aND2Tce3HmbnxY0aod16crOeI5dndB84v/hN32VPSVX+CbtsDXR6ED7hmItMGKpnJ7h/gXmIK6AzELHEr3od','bx-umidtoken':'S2gAWFvrznqymrKnNNrp-ilU26sxMCmsn-uDNWWg_gvVk08ZG5CG2lyLJzk22ooWb0nofjr-6WkDRnOoHnS54MihKN7ZY2pAaXtHOOQ9nibfgw==','mini-janus':'3%40sK%2FYD1mBDW%2FgQsUtZIbTW1nYjEZL2l0jsXinukFRoD6eT6S26SHLEpBLpcR%3D','x-decode-ua':'false','x-ele-check':'qbks7jvclY8g1AKx9OY4pAuNxblgBCeX59pnG1mvihT2BUW8rNe2DV1GzUFyWVcr4ldbFkFDT51R4iOUsZ+kvwnEE26LqVymaYFklmwAr9L6ftJlG1OpEBzVSj3nKYryp+kcPlTV6GBGHCEmX8z+ImS9+SgmlSlI+M6665Nn+0fUP4AWkAGkwQIVc25+cqdQcxruCn5PhR1hidMODRSe4RN8cgQrgvJZge3qWEdhbQ/YXb0Ovp8TCgqPSmUzYaLeAVIlKNFRdlrICpRmvQBFFAr2mS7hzx/FEeSlBb+HLpRzdBKfTk3uCzjUN3rSXC+LrKROAcm/8twHmwOu7bYqK+CelnPHXrDmqRDHVWIg2D5/k+FHsrvV6XQWYPtNfxmBlKxxo+3VMCBotDCoB47E+GcKohQZOtMQicaFbvnNOYBh8d4S4SfGYBFMLnbL0Gr/WgQR9i4ke2S9TlRJ5mYDpFs156KNwT/gvs2X7d8dFatGDd8LsQJc+56U8TROio8X','x-ele-ua':'RenderWay/miniProgram MiniAppId/wxece3a9a4c82f58c9 MiniAppVersion/10.20.1 DeviceId/o_PVDuFVUiMuXa6jZ4cdWpremOXc AppName/Wechat microsoft/microsoft windows/10 Wechat/3.4.0 channel/wechat_app subChannel/wechat_app.default MicroMessenger/8.0.6','x-secext-city':'21','x-smallstc':'{"loginSucResultAction":"loginResult","st":"tb_s_ele_1ADg6Le-9nIGfIQpspL2mGA","loginType":"snsLogin","open_id":"oQZUI0dAar6UJEJjyqlF_EpvOxao","loginScene":"miniProgramLogin","unb":2209633667417,"resultCode":100,"appEntrance":"weixin","elemeExt":"{}","smartlock":false,"snsType":"weixin_mini_program","sid":"12be3156d10c030cec5acf731cc19408","cookie2":"12be3156d10c030cec5acf731cc19408","munb":2209633667417,"SID":"MTJiZTMxNTZkMTBjMDMwY2VjNWFjZjczMWNjMTk0MDjMFG-U2x_nu2TxBkH-SqbB","bindTag":"existed","loginResult":"success","sgcookie":"M100gXLFvYP5Fr2PcLvry0ZbmxyWQoKIKBAyF7mJsrmbyn8NDS84jY/MTCUTf+a5Iz6vMBvY7EovOaKViS1KUxTf9/CB2ktVude/f4YNmQvy01o=","user_id":"1000127450482","csg":"1564a413","union_id":"o_PVDuFVUiMuXa6jZ4cdWpremOXc","USERID":"1000127450482","UTUSER":"1000127450482"}','x-tap':'wx','x-ticid':'AajHukEBWqrofxIrcnI9ipFGHO5ZzwzX_pkYydYIMcFyxAps43eqgj5F6Nyy6sSzPuAct11CyPuOVYJ-nfsgQ7bd5keq','Referer':'https://servicewechat.com/wxece3a9a4c82f58c9/496/page-frame.html','Cookie':ck ,'content-type':'application/x-www-form-urlencoded'}#line:45
