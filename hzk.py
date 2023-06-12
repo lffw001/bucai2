@@ -13,7 +13,7 @@ https://www.huzhukang.pro/h5/register/712115入口复制到微信或者浏览器
 ck =os .getenv ("hzkck")#line:1
 ck0 =ck .split ("&")#line:3
 nowtime =str (round (time .time ()*1000 ))#line:4
-gg()
+print(gg())
 for i in range (len (ck0 )):#line:7
    ck1 =ck0 [i ]#line:8
    ck2 =ck1 .split ("#")#line:9
