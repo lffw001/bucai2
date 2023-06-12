@@ -22,7 +22,7 @@ ck = cookie0.split("&")
     data0 = 'appid=large_account&functionId=officialAccountSign_sign&client=android&clientVersion=1.0.0&loginType=1&loginWQBiz=dzhsign&body={"itemId":"1"}'
     
 ''' ''#line:12
-gg ()#line:13
+print(gg())#line:13
 for i in range (len (ck )):#line:14
     cookie =ck [i ]#line:15
     print (f"----------开始第{i+1}个号----------")#line:16
