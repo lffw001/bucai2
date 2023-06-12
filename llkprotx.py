@@ -3,7 +3,12 @@ import os
 import time
 from urllib.parse import quote,unquote
 #乐乐看pro提现，变量名:lelekck，需要抓包apillk.cengaw.cn/请求头里面的device#Authorization，（Authorization只需要Bearer后面的部分）
+#ua改成自己的
+#1.1
 import requests
+ua = ''
+
+
 money = "5"#提现金额，默认5
 num = 3#循环次数，有时会提示太快
 
@@ -19,7 +24,7 @@ gg =requests .request ("GET",unquote ("http%3A%2F%2Fgh.qninq.cn%2Fhttps%3A%2F%2F
 print (gg .text )#line:8
 print ('\n开始提现'+str (money ))#line:9
 payload ='gate=wechat&amount='+money +'&lat=&lng=&root=0&sim=1&debug=1&model=V2055A&power=0&vpn=0'#line:10
-headers ={'accept':'application/json','device':device ,'oaid':device ,'store':'website','version':'108','platform':'1','Authorization':"Bearer "+Auth ,'Content-Type':'application/x-www-form-urlencoded','User-Agent':'Dalvik/2.1.0 (Linux; U; Android 12; V2055A Build/TP1A.220624.014)','Host':'apillkpro.cengaw.cn','Connection':'Keep-Alive','Accept-Encoding':'gzip','Content-Length':'79',}#line:26
+headers ={'accept':'application/json','device':device ,'oaid':device ,'store':'website','version':'108','platform':'1','Authorization':"Bearer "+Auth ,'Content-Type':'application/x-www-form-urlencoded','User-Agent':ua,'Host':'apillkpro.cengaw.cn','Connection':'Keep-Alive','Accept-Encoding':'gzip','Content-Length':'79',}#line:26
 for i in range (num ):#line:28
    response =requests .request ("POST",url ,headers =headers ,data =payload )#line:29
    if response .status_code ==200 :#line:30
