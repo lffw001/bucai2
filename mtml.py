@@ -10,7 +10,7 @@ token0 = os.getenv("mttoken")
 token1 = token0.split('&')
 sjtime = str(round(time.time()*1000))
 
-gg()
+print(gg())
 for b in range (len (token1 )):#line:6
     token =token1 [b ]#line:7
     url0 ="https://wx.waimai.meituan.com/mtandroid_wmgroup/v1/wlwc/signintask/signin?ui=2425758028&region_id=1000431100&region_version=1685183676441"#line:9
