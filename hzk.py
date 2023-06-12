@@ -1,5 +1,6 @@
 import json
 import os
+from sendNotify import gg
 from urllib.parse import unquote
 import requests,time
 ''''
@@ -12,8 +13,7 @@ https://www.huzhukang.pro/h5/register/712115入口复制到微信或者浏览器
 ck =os .getenv ("hzkck")#line:1
 ck0 =ck .split ("&")#line:3
 nowtime =str (round (time .time ()*1000 ))#line:4
-gg =requests .request ("GET",unquote ("http%3A%2F%2Fgh.qninq.cn%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2F241793%2Fbucai2%2Fmain%2Fgg",'utf-8'))#line:5
-print (gg .text )#line:6
+gg()
 for i in range (len (ck0 )):#line:7
    ck1 =ck0 [i ]#line:8
    ck2 =ck1 .split ("#")#line:9
