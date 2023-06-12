@@ -21,7 +21,7 @@ device =ck [0 ]#line:3
 Auth =ck [1 ]#line:4
 time1 =str (round (time .time ())*1000 )#line:5
 url ="https://apillkpro.cengaw.cn/api/v2/cash/exchange"#line:6
-gg()
+print(gg())
 print ('\n开始提现'+str (money ))#line:9
 payload ='gate=wechat&amount='+money +'&lat=&lng=&root=0&sim=1&debug=1&model=V2055A&power=0&vpn=0'#line:10
 headers ={'accept':'application/json','device':device ,'oaid':device ,'store':'website','version':'108','platform':'1','Authorization':"Bearer "+Auth ,'Content-Type':'application/x-www-form-urlencoded','User-Agent':ua,'Host':'apillkpro.cengaw.cn','Connection':'Keep-Alive','Accept-Encoding':'gzip','Content-Length':'79',}#line:26
