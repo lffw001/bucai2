@@ -4,7 +4,7 @@ from sendNotify import gg
 import requests,datetime
 
 #by：不才，25-15整合
-#1.2优化通知，修复因为404报错停止运行,整合两场时间，定时:57 29,59 10,14 * * *
+#1.3优化通知，修复因为404报错停止运行,整合两场时间，定时:57 29,59 10,14 * * *
 #25-15,10:30  419967B3A4064140BA78E6A046DF0FC1
 #25-15 15:30  687D57731F804A2CAE1F455331F83524
 #美团的token=xxx
@@ -72,9 +72,9 @@ while i <num :#line:94
     else :#line:112
         print ("404")#line:113
     i +=1 #line:114
-gg ()#line:115
+
 if notice ==1 :#line:116
     pushplus (gg (),'\n不才提醒您'+msg ,token )#line:117
 else :#line:118
     print ("未开启推送")
-
+print(gg())
