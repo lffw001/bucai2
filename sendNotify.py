@@ -4,9 +4,11 @@
 # @Author  : curtinlv
 # @File    : sendNotify.py
 # @Software: PyCharm
-
+#不才库必要依赖
 import sys
 import os, re
+from urllib.parse import unquote
+import requests,json
 cur_path = os.path.abspath(os.path.dirname(__file__))
 root_path = os.path.split(cur_path)[0]
 sys.path.append(root_path)
@@ -63,7 +65,10 @@ if "QYWX_AM" in os.environ:
     if len(os.environ["QYWX_AM"]) > 1:
         QYWX_AM = os.environ["QYWX_AM"]
         # print("已获取并使用Env环境 QYWX_AM")
-
+def gg():
+    gg = requests.request("GET", unquote(
+        "http%3A%2F%2Fgh.qninq.cn%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2F241793%2Fbucai2%2Fmain%2Fgg", 'utf-8'))
+    return gg.text
 if BARK:
     notify_mode.append('bark')
     # print("BARK 推送打开")
