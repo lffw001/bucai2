@@ -1,16 +1,27 @@
 import json
-import os
+import os,sys,logging
+from notify import send
 from sendNotify import gg
 from urllib.parse import quote,unquote
 import requests,time,datetime
 #需要库里的依赖sendNotify.py自己在频道或者库下载
-
+#v1.1,新增通知
 #美团米粒签到和三餐，变量mttoken=xxxx,不要token=,多号&分割
 
 token0 = os.getenv("mttoken")
 token1 = token0.split('&')
 sjtime = str(round(time.time()*1000))
-
+log_content = ''
+class LoggerWriter:
+    def __init__(self, level):
+        self.level = level 
+    def write(self, message):
+        global log_content
+        self.level.write(message)
+        log_content += message    
+    def flush(self):
+        return None
+sys.stdout = LoggerWriter(sys.stdout)
 print(gg())
 for b in range (len (token1 )):#line:6
     token =token1 [b ]#line:7
@@ -58,3 +69,4 @@ for b in range (len (token1 )):#line:6
     else :#line:82
         print (res1 .text )
         continue
+send("美团米粒",log_content)
