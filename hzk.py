@@ -1,10 +1,11 @@
 import json
-import os
+import os,sys,logging
 from sendNotify import gg
+from notify import send
 from urllib.parse import unquote
 import requests,time
 ''''
-@不才
+@不才,v1.1,新增通知
 互助康，感觉像杀猪盘，签到换实物，群友保温杯到货，签到3天
 https://www.huzhukang.pro/h5/register/712115入口复制到微信或者浏览器打开，需要实名认证和银行卡，可以用社工实名
 变量：hzkck,   数据cookie#token，多号用&连接     ,数据在https://www.huzhukang.pro获取
@@ -13,6 +14,19 @@ https://www.huzhukang.pro/h5/register/712115入口复制到微信或者浏览器
 ck =os .getenv ("hzkck")#line:1
 ck0 =ck .split ("&")#line:3
 nowtime =str (round (time .time ()*1000 ))#line:4
+log_content = ''
+class LoggerWriter:
+   def __init__(self, level):
+      self.level = level
+
+   def write(self, message):
+      global log_content
+      self.level.write(message)
+      log_content += message
+
+   def flush(self):
+      return None
+sys.stdout = LoggerWriter(sys.stdout)
 print(gg())
 for i in range (len (ck0 )):#line:7
    ck1 =ck0 [i ]#line:8
@@ -52,3 +66,4 @@ for i in range (len (ck0 )):#line:7
          print ("数据出错")#line:61
    else :#line:62
       print ("数据出错")
+send("互助康通知",log_content)
