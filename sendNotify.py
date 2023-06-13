@@ -68,7 +68,10 @@ if "QYWX_AM" in os.environ:
 def gg():
     gg = requests.request("GET", unquote(
         "http%3A%2F%2Fgh.qninq.cn%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2F241793%2Fbucai2%2Fmain%2Fgg", 'utf-8'))
-    return gg.text
+    if gg.status_code == 200:
+        return gg.text
+    else:
+        return unquote(unquote('%E8%8E%B7%E5%8F%96%E5%85%AC%E5%91%8A%E5%A4%B1%E8%B4%A5','utf-8'))
 if BARK:
     notify_mode.append('bark')
     # print("BARK 推送打开")
