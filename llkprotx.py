@@ -11,7 +11,7 @@ from notify import send
 #一天运行2-3次
 #cron 0 0,7,15 * * *
 money = "5"  # 提现金额，默认5
-ua = "Dalvik/2.1.0 (Linux; U; Android 12; V2055A Build/TP1A.220624.014)"
+ua = ""
 # Make Sure You're Running The Program With python3.10 Otherwise It May Crash
 # To Check Your Python Version Run "python -V" Command
 try:
