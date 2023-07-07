@@ -6,7 +6,7 @@ from urllib.parse import quote, unquote
 
 # @不才
 # 饿了么社区签到换会员 7/7 优化日志 v1.6
-#请勿频繁运行
+#请勿频繁运行，限制5号，有需求就加（代挂除外）
 # 变量：elmck，多号&或者单独设置elmck（跟京东一样）隔开，定时cron 0 0 10,18 * * *
 #python3.10
 
