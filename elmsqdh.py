@@ -1,4 +1,3 @@
-import sendNotify
 from notify import send
 import requests, time, datetime
 import json, os, sys
