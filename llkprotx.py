@@ -3,13 +3,16 @@ import datetime
 import requests, logging
 import json, sys, time, os
 from notify import send
+'''''
+new Env("乐乐看Pro提现")
+1.3修复闯关任务不跑,运气好每天多加几百提现券 #第一次跑视频需要手动进入APP————视频——————随便点个小视频，领取右边提示4个红包的红包
+乐乐看pro提现（配合蛋姨的本），变量名:llkck，需要抓包apillkpro.cengaw.cn/请求头里面的device#Authorization，（Authorization只需要Bearer后面的部分）
+6.22新增看资讯任务和闯关,多号换行隔开,ua换成自己的（User-Agent）
+需要提5块设一次定时弄在任务本前面
+一天运行2-3次
+cron 0 0,7,15 * * *
+'''''
 
-# 1.3修复闯关任务不跑,运气好每天多加几百提现券 #第一次跑视频需要手动进入APP————视频——————随便点个小视频，领取右边提示4个红包的红包
-# 乐乐看pro提现（配合蛋姨的本），变量名:llkck，需要抓包apillkpro.cengaw.cn/请求头里面的device#Authorization，（Authorization只需要Bearer后面的部分）
-# 6.22新增看资讯任务和闯关,多号换行隔开,ua换成自己的（User-Agent）
-# 需要提5块设一次定时弄在任务本前面
-# 一天运行2-3次
-# cron 0 0,7,15 * * *
 money = "5"  # 提现金额，默认5
 ua = "Dalvik/2.1.0 (Linux; U; Android 11; V205A Build/TP1A.22054.014)"
 
