@@ -20,7 +20,7 @@ activityId = ''
 strActivityId=''
 actCode = ''
 
-#所有号可以用同一个号的数据兑换会员
+#所有号可以用同一个号的数据兑换会员，填写之后就可以把viplist=0
 
 version = sys.version.split(" ")
 ver = version[0].split(".")
