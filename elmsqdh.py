@@ -20,7 +20,7 @@ activityId = ''
 strActivityId=''
 actCode = ''
 
-#所有号可以用同一个的数据兑换会员
+#所有号可以用同一个号的数据兑换会员
 
 version = sys.version.split(" ")
 ver = version[0].split(".")
