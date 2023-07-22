@@ -2,7 +2,7 @@ import requests,os,time,sys,datetime
 from notify import send
 '''
 new Env("中健365")
-每日签到领现金0.1-0.2，自动秒到到账微信
+每日签到抽奖领现金0.1-0.2，自动秒到到账微信
 入口：#小程序://中健365达人/vacWkbjhWEe5mSl
 抓包：https://dc.zhongjian365.com/域名里面的X-Auth-Key
 变量名：zjck，多号换行
