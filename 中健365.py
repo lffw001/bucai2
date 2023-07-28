@@ -6,7 +6,7 @@ new Env("中健365")
 入口：#小程序://中健365达人/vacWkbjhWEe5mSl
 抓包：https://dc.zhongjian365.com/域名里面的X-Auth-Key
 变量名：zjck，多号换行
-cron 0 7 * * *
+cron 0 12 * * *
 v1.1 修复报错
 '''
 
