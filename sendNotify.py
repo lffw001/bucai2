@@ -67,7 +67,7 @@ if "QYWX_AM" in os.environ:
         # print("已获取并使用Env环境 QYWX_AM")
 def gg():
     gg = requests.request("GET", unquote(
-        "http%3A%2F%2Fgh.qninq.cn%2Fhttps%3A%2F%2Fraw.githubusercontent.com%2F241793%2Fbucai2%2Fmain%2Fgg", 'utf-8'))
+        "https://ghproxy.com/https://raw.githubusercontent.com/241793/bucai2/main/gg", 'utf-8'))
     if gg.status_code == 200:
         return gg.text
     else:
