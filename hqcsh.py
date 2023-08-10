@@ -3,7 +3,7 @@ import json, os
 import requests, time
 from notify import send
 from sendNotify import gg
-# by：不才，2023/5/22
+# by：不才，2023/8/10
 # 兑换id，根据需求填入wxchangeid中，默认兑换1.88，一周兑换一次,实现签到兑换，领取还没完成
 # 环境变量cshck,0 10,18 * * *
 #  '647894196522340352'  // 188积分 1.08元
@@ -21,9 +21,14 @@ token = ""
 user = ""
 
 
+gg = requests.request("GET", "https://ghproxy.com/https://raw.githubusercontent.com/241793/bucai2/main/gg")
+if gg.status_code ==200:
+    print(gg.text)
+    xx0 =(gg.text)#line:2
+else:
+    print("不才提醒您网路连接超时")
+    xx0 =("不才提醒您网路连接超时")#line:2
 
-print (gg ())#line:1
-xx0 =(gg ())#line:2
 cshck =os .getenv ("cshck")#line:3
 ck =cshck .split ("&")#line:4
 b =0 #line:5
