@@ -4,16 +4,16 @@ import requests, logging
 import json, sys, time, os
 from notify import send
 
-# 1.4  修复
-#乐乐看pro提现（配合蛋姨的本），变量名:llkck，需要抓包apillkpro.cengaw.cn/请求头里面的device#Authorization，（Authorization只需要Bearer后面的部分）
-#8.11新增看资讯任务和闯关,多号换行隔开,ua换成自己的（User-Agent）
-#需要提5块设一次定时弄在任务本前面
-#一天运行2-3次
-#cron 0 0,7,15 * * *
+# 1.4修复
+# 乐乐看提现（配合蛋姨的本），变量名:lelekck，需要抓包apillk.cengaw.cn/请求头里面的device#Authorization，（Authorization只需要Bearer后面的部分）
+# 8.11新增看资讯任务和闯关,多号换行隔开,ua换成自己的（User-Agent）
+# 需要提5块设一次定时弄在任务本前面
+# 一天运行2-3次
+# cron 0 0,7,15 * * *
 money = "5"  # 提现金额，默认5
-ua = "Mozilla/5.0 (Linux; Android 10; SEA-AL10 Build/HUAWEISEA-10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.5 Mobile Safari/537.36"
+ua = "Mozilla/5.0 (Linux; Android 10; SEA-AL10 Build/HUAWEISEA-AL10; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/92.0.4515.105 Mobile Safari/537.36"
 
-ck = os.getenv("llkck")
+ck = os.getenv("lelekck")
 ck1 = ck.split("\n")
 log_content = ''
 
@@ -34,9 +34,10 @@ class LoggerWriter:
 sys.stdout = LoggerWriter(sys.stdout)
 
 # 登录
+'''
 
-
-print("当前执行【乐乐看PRO提现】 v1.4")
+'''
+print("当前执行【乐乐看提现】 v1.4")
 for b in range(len(ck1)):
     fg = ck1[b].split("#")
     device = fg[0]
@@ -44,14 +45,13 @@ for b in range(len(ck1)):
 
     print("\n----------不才提醒您，账号" + str(b + 1) + "运行中----------")
     # user
-
-    url1 = "https://apillkpro.cengaw.cn/api/v2/member/profile"
-    #提现
-    url2 ="https://apillkpro.cengaw.cn/api/v2/cash/exchange"
-    #视频次数
-    url3 = "https://apillkpro.cengaw.cn/api/v2/video/coin?ticket=eyJ0eXAiOiJKV1MiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2ODc0MTg4OTYsImlhdCI6MTY4NzQxNTI5NiwibmJmIjoxNjg3NDE1MzExLCJzdWIiOiJ2aWRlbyIsImF1ZCI6MTI3ODc4MywianRpIjoiNjQ5M2VhMDA0MjhjNyJ9.ZmQ2Mzk5OWMzNmY0ZjI3Mjk3NDgxN2FiZGRjZmE2NjE1YTgwODIwMzM3YzJmZDBiNDI3MjIzMTE4ZWQ1NTQ3OWI5OWY4MjZlNmE5YTJiYjg4NDcwMmUxMGMwNDk4MTA2NjYwMzI3ZjdiZGU1NjI3NDE3NTk0ODgzODgxZjNkZmQ"
-    #开启视频红包
-    url4 = "https://apillkpro.cengaw.cn/api/v2/video/redenv"
+    url1 = "https://apillk.cengaw.cn/api/v2/member/profile"
+    # 提现
+    url2 = "https://apillk.cengaw.cn/api/v2/cash/exchange"
+    # 视频次数
+    url3 = "https://apillk.cengaw.cn/api/v2/video/coin?ticket=eyJ0eXAiOiJKV1MiLCJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2ODc0MDMwMjUsImlhdCI6MTY4NzM5OTQyNSwibmJmIjoxNjg3Mzk5NDQwLCJzdWIiOiJ2aWRlbyIsImF1ZCI6MTI3ODczMSwianRpIjoiNjQ5M2FjMDE4M2I3YiJ9.Yjk1NWM1NDM1N2E3M2JmOWIwOTFhZTFiNTQ5ZjI1N2YwYjdhZmM0OGRlODRiMjNmOTlkNGZmNzg2NjZhZDk4Mzc3MjZhNTNhZjk1MDk0ZDA0MzY0MzkwN2RhMjNkN2UxZDFkYjQ3ZjhmYmY1YzUzMzhlZjRiYTdkM2JjOGQ0YTg"
+    # 开启视频红包
+    url4 = "https://apillk.cengaw.cn/api/v2/video/redenv"
 
     data2 = 'gate=wechat&amount=' + money + '&lat=&lng=&root=0&sim=1&debug=1&model=V2055A&power=0&vpn=0'
     headers2 = {
@@ -64,7 +64,7 @@ for b in range(len(ck1)):
         'Authorization': "Bearer " + auth,
         'Content-Type': 'application/x-www-form-urlencoded',
         'User-Agent': ua,
-        'Host': 'apillkpro.cengaw.cn',
+        'Host': 'apillk.cengaw.cn',
         'Connection': 'Keep-Alive',
         'Accept-Encoding': 'gzip',
         'Content-Length': '79',
@@ -79,7 +79,7 @@ for b in range(len(ck1)):
         'platform': '1',
         'Authorization': f'Bearer {auth}',
         'User-Agent': ua,
-        'Host': 'apillkpro.cengaw.cn',
+        'Host': 'apillk.cengaw.cn',
         'Connection': 'Keep-Alive',
         'Accept-Encoding': 'gzip'
 
@@ -93,7 +93,7 @@ for b in range(len(ck1)):
         'platform': '1',
         'Authorization': f'Bearer {auth}',
         'User-Agent': ua,
-        'Host': 'apillkpro.cengaw.cn',
+        'Host': 'apillk.cengaw.cn',
         'Connection': 'Keep-Alive',
         'Accept-Encoding': 'gzip',
         'Content-Length': '12'
@@ -108,7 +108,7 @@ for b in range(len(ck1)):
         'platform': '1',
         'Authorization': f'Bearer {auth}',
         'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 13; V2055A Build/TP1A.220624.014)',
-        'Host': 'apillkpro.cengaw.cn',
+        'Host': 'apillk.cengaw.cn',
         'Connection': 'Keep-Alive',
         'Content-Type': 'application/x-www-form-urlencoded'
     }
@@ -162,7 +162,7 @@ for b in range(len(ck1)):
                                 print(f"{res4.json().get('message')}")
                                 break
                         if counttotal >= 21:
-                            url6 = "https://apillkpro.cengaw.cn/api/v2/zhuan/done"
+                            url6 = "https://apillk.cengaw.cn/api/v2/zhuan/done"
                             headers6 = {
                                 'accept': 'application/json',
                                 'device': device,
@@ -172,13 +172,13 @@ for b in range(len(ck1)):
                                 'platform': '1',
                                 'Authorization': f'Bearer {auth}',
                                 'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 13; V2055A Build/TP1A.220624.014)',
-                                'Host': 'apillkpro.cengaw.cn',
+                                'Host': 'apillk.cengaw.cn',
                                 'Connection': 'Keep-Alive',
                                 'Content-Type': 'application/x-www-form-urlencoded'
                             }
                             res6 = requests.request("POST", url6, headers=headers6, data="id=7")
                             if res6.json().get("code") == 40302:
-                                print(f"已经领取过了，{res6.json().get('message')}")
+                                print(f"领取过了,{res6.json().get('message')}")
                                 break
                             elif res6.json().get("code") == 0:
                                 print(
@@ -205,14 +205,14 @@ for b in range(len(ck1)):
                         'platform': '1',
                         'Authorization': f'Bearer {auth}',
                         'User-Agent': ua,
-                        'Host': 'apillkpro.cengaw.cn',
+                        'Host': 'apillk.cengaw.cn',
                         'Connection': 'Keep-Alive',
                         'Content-Type': 'application/x-www-form-urlencoded'
                     }
                     data5 = f"no={i + 1}&ticket="
-                    res8 = requests.request("GET", 'https://apillkpro.cengaw.cn/api/v2/reward/barrier/index',
+                    res8 = requests.request("GET", 'https://apillk.cengaw.cn/api/v2/reward/barrier/index',
                                             headers=headers5)
-                    res5 = requests.request("POST", 'https://apillkpro.cengaw.cn/api/v2/reward/barrier/index',
+                    res5 = requests.request("POST", 'https://apillk.cengaw.cn/api/v2/reward/barrier/index',
                                             headers=headers5, data=f"no={i + 1}&ticket=")
                     data3 = res5.json().get("result")
 
@@ -233,8 +233,8 @@ for b in range(len(ck1)):
 
 
     else:
-        print("未知错误，请检查数据,可能封号了")
-send("乐乐看pro提现",log_content)
+        print("未知错误，请检查数据，可能封号了")
+send("乐乐看提现",log_content)
 
 
 
