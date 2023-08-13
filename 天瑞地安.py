@@ -5,7 +5,7 @@ new Env("天瑞地安")
 2023/8/13  v1.0
 进入首页横幅的看新闻活动,抓包https://guess.rabtv.cn域名里面的authorization，不要Bearer
 变量名：trda ，多号换行
-一天一次，手动提现，一天1块左右
+一天一次，手动提现，一天1块左右（看号）
 '''
 notify = True#通知
 version = sys.version.split(" ")
