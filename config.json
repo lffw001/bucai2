@@ -4,7 +4,7 @@
         "checkPermission": true,
         "versionCode": 3,
         "openUrl": "https://pd.qq.com/s/73dnvo482",
-        "shortAnnouncement": "<p>点击下面的按钮，<strong>加入QQ频道</strong>，立即获取最新的软件更新信息。<strong>立即加入</strong>吧！</p>",
+        "shortAnnouncement": "<p>点击下面的按钮，<strong>加入QQ频道</strong>，频道链接【https://pd.qq.com/s/73dnvo482】立即获取最新的软件更新信息。<strong>立即加入</strong>吧！</p>",
         "announcement": "<div>此工具可以很方便的获取 ele app 的 cookie，点击下面按钮，加入频道，及时获取软件的更新信息。狗东机器人以及其它项目！</div>"
     }
 }
