@@ -15,10 +15,12 @@ python3.10
 viplist = 1#0为只显示会员情况（可能有些不显示),如果第一次运行填写1显示全部奖励，以及兑换会员需要的数据
 exchange = 0#1为开启兑换（第一次运行先填写0，viplist=1时获取所有数据后填写在下面后开启）
 #上面填写1时，必须把下面的数据填上(你要兑换的奖励数据，也就是会员)，记得所有数据需要同一个账号的
-sceneCode0 = ""
+sceneCode0 = "wrczVqEQAAdA2YuKUR2d-PGx2SOimmIA"
 activityId = ''
-strActivityId=''
 actCode = ''
+
+strActivityId=activityId
+
 
 #所有号可以用同一个的数据兑换会员
 
