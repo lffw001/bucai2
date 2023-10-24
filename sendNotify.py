@@ -4,7 +4,7 @@
 # @Author  : curtinlv
 # @File    : sendNotify.py
 # @Software: PyCharm
-#不才库必要依赖
+
 import sys
 import os, re
 from urllib.parse import unquote
@@ -65,13 +65,6 @@ if "QYWX_AM" in os.environ:
     if len(os.environ["QYWX_AM"]) > 1:
         QYWX_AM = os.environ["QYWX_AM"]
         # print("已获取并使用Env环境 QYWX_AM")
-def gg():
-    gg = requests.request("GET", unquote(
-        "https://ghproxy.com/https://raw.githubusercontent.com/241793/bucai2/main/gg", 'utf-8'))
-    if gg.status_code == 200:
-        return gg.text
-    else:
-        return unquote(unquote('%E8%8E%B7%E5%8F%96%E5%85%AC%E5%91%8A%E5%A4%B1%E8%B4%A5','utf-8'))
 if BARK:
     notify_mode.append('bark')
     # print("BARK 推送打开")
