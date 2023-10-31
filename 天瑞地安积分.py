@@ -4,6 +4,7 @@ import hashlib,random
 '''
 new Env("天瑞地安积分")
 换实物
+修复报错
 抓app里面的X-SESSION-ID和X-ACCOUNT-ID，用#连接
 多号换行
 cron 0 6,8 * * *
