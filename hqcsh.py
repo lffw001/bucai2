@@ -2,7 +2,7 @@ import datetime
 import json, os,sys
 import requests, time
 
-# 不才，2023/10/18 稍微修了下
+# 不才，2023/10/31 稍微修了下
 # 兑换id，根据需求填入exchangeid中，默认兑换1.08，一周兑换一次,实现签到兑换，领取还没完成
 # 环境变量cshck,58 10,17 * * *
 #多号用换行
