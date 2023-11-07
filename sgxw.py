@@ -3,7 +3,8 @@ import time
 import requests
 import hashlib,sys,os
 '''
-by:不才    v1.41 更新：限制5号，增加登录任务（20积分）
+by:不才    v1.41 
+7/9更新：增加登录任务（20积分）
 修复问题11/6
 APP上观新闻，积分卡券或者实物，下载链接https://a.app.qq.com/o/simple.jsp?pkgname=com.shwatch.news
 变量名：sgxwck,多号换行分开，一天200多积分
