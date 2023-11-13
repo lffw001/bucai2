@@ -1,4 +1,4 @@
-fimport time,sys,os
+import time,sys,os
 import requests
 '''
 new Env("疯狂赏金")
