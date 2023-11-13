@@ -2,7 +2,7 @@ import time,sys,os
 import requests
 '''
 new Env("疯狂赏金")
-每日0.3，貌似可以换号抓，抓完就卸载，自己测试，支付宝好像不能提现
+每日0.3，貌似可以换号抓，抓完就卸载，自己测试，支付宝好像要实名、绑定手机号，信息要一致
 下载地址：http://frasd.hehuacn.com/jump?code=VcRiJN
 抓system，id登录点击头像即可看到
 格式：export fksj="备注#id#system"
