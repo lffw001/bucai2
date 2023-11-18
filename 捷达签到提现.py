@@ -5,6 +5,7 @@ import requests
 new Env("捷达签到提现")
 捷达app，进入红包页面即可抓包，复制全部token
 环境变量：jdtoken
+多号用====分开
 corn 0 6 * * *
 1.11修复报错
 '''
