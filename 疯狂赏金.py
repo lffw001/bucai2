@@ -7,7 +7,7 @@ new Env("疯狂赏金")
 下载地址：http://frasd.hehuacn.com/jump?code=VcRiJN
 抓system，id登录点击头像即可看到
 readUserId微信打开链接http://redpage230618.read.biwuzhaojin.com/web-read/read?channelId=413169，进去授权复制链接即可看到
-！！！一定要在浏览器打开一下自己复制的链接，不然无法提现0.6
+！！！一定要在浏览器打开一下自己复制的链接并且点一下翻倍提现，不然无法提现0.6
 格式：export fksj="备注#id#system#readUserId"
 不加readUserId只有0.3
 多号用====隔开
