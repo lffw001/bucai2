@@ -3,10 +3,10 @@ import time,sys,os
 import requests
 '''
 new Env("疯狂赏金")
-每日0.9，貌似可以换号抓，抓完就卸载，自己测试，支付宝好像不能提现
+每日0.9，貌似可以换号抓，抓完就卸载，自己测试，建议微信登陆绑定，支付宝需要全部信息才能提现
 下载地址：http://frasd.hehuacn.com/jump?code=VcRiJN
 抓system，id登录点击头像即可看到
-usid微信打开链接http://redpage230618.read.biwuzhaojin.com/web-read/read?channelId=413169，进去授权复制链接即可看到
+readUserId微信打开链接http://redpage230618.read.biwuzhaojin.com/web-read/read?channelId=413169，进去授权复制链接即可看到
 格式：export fksj="备注#id#system#readUserId"
 不加readUserId只有0.3
 多号用====隔开
